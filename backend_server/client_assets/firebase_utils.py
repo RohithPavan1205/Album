@@ -57,29 +57,27 @@ def upload_file(file_obj, filename, request=None):
              print(f"Firebase upload failed: {e}. Falling back to local.")
     
     # Fallback: Local Storage (for dev / when no Firebase creds)
-    if settings.DEBUG:
-        media_root = Path(settings.MEDIA_ROOT)
-        full_path = media_root / filename
+    # Fallback: Local Storage (for dev / when no Firebase creds)
+    # We now allow this even if NOT DEBUG, for testing on ephemeral cloud instances (Render Free)
+    # WARNING: Files will be lost on server restart!
+    
+    media_root = Path(settings.MEDIA_ROOT)
+    full_path = media_root / filename
+    
+    # Ensure directories exist
+    full_path.parent.mkdir(parents=True, exist_ok=True)
+    
+    # Save file
+    if hasattr(file_obj, 'seek'):
+        file_obj.seek(0)
         
-        # Ensure directories exist
-        full_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(full_path, 'wb+') as destination:
+        for chunk in file_obj.chunks():
+            destination.write(chunk)
+    
+    # Construct URL
+    host = ""
+    if request:
+        host = f"{request.scheme}://{request.get_host()}"
         
-        # Save file
-        if hasattr(file_obj, 'seek'):
-            file_obj.seek(0)
-            
-        with open(full_path, 'wb+') as destination:
-            for chunk in file_obj.chunks():
-                destination.write(chunk)
-        
-        # Construct URL
-        # NOTE: Using 127.0.0.1 for editor testing. 
-        # For actual device testing, user needs to change this to their IP or use ngrok.
-        # We try to get the host from the request if provided.
-        host = "http://127.0.0.1:8000"
-        if request:
-            host = f"{request.scheme}://{request.get_host()}"
-            
-        return f"{host}{settings.MEDIA_URL}{filename}"
-        
-    raise Exception("Firebase not configured and not in DEBUG mode.")
+    return f"{host}{settings.MEDIA_URL}{filename}"

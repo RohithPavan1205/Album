@@ -78,6 +78,12 @@ def upload_file(file_obj, filename, request=None):
     # Construct URL
     host = ""
     if request:
-        host = f"{request.scheme}://{request.get_host()}"
+        scheme = request.scheme
+        # Hack for Render/Proxies: If we are not on localhost/127.0.0.1, assume HTTPS
+        # django request.scheme might report http because of the proxy termination
+        if "localhost" not in request.get_host() and "127.0.0.1" not in request.get_host():
+            scheme = "https"
+            
+        host = f"{scheme}://{request.get_host()}"
         
     return f"{host}{settings.MEDIA_URL}{filename}"

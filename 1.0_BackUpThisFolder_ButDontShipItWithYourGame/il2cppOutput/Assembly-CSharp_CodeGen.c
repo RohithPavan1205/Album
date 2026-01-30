@@ -12,84 +12,289 @@
 
 
 
-// 0x00000001 System.Void ArButton::Awake()
+// 0x00000001 System.Void AppUIManager::Start()
+extern void AppUIManager_Start_m234F755093C24EF05043D008EB9D04B6C34CC993 (void);
+// 0x00000002 System.Collections.IEnumerator AppUIManager::StartAppFlow()
+extern void AppUIManager_StartAppFlow_m0093F3927CBACF33A6C87CECFF10AD53AE4E0814 (void);
+// 0x00000003 System.Void AppUIManager::OnLoginClicked()
+extern void AppUIManager_OnLoginClicked_m5520EE9EF1E05D9976173366965F7D75D74B91D3 (void);
+// 0x00000004 System.Void AppUIManager::StartLoading(System.String)
+extern void AppUIManager_StartLoading_m410AD2FEEC5D9AD63F75BC06A204245C14463AA8 (void);
+// 0x00000005 System.Void AppUIManager::OnRetryClicked()
+extern void AppUIManager_OnRetryClicked_m87106F451F3D951E04EF7FB54C0B28453215929B (void);
+// 0x00000006 System.Void AppUIManager::UpdateProgress(System.Single)
+extern void AppUIManager_UpdateProgress_mDFCF21A6097490F7D2D7A308B3A4EABA01AE0BF0 (void);
+// 0x00000007 System.Void AppUIManager::OnAssetsReady(UnityEngine.XR.ARSubsystems.MutableRuntimeReferenceImageLibrary,System.String)
+extern void AppUIManager_OnAssetsReady_mE959233DB1DF31D1887155B3B4DC20F2C0A05615 (void);
+// 0x00000008 System.Collections.IEnumerator AppUIManager::TransitionToAR()
+extern void AppUIManager_TransitionToAR_mE81FA0AF4F1156690F84023060B1AFFE68F5758F (void);
+// 0x00000009 System.Void AppUIManager::OnError(System.String)
+extern void AppUIManager_OnError_m3E7765E4304A33AFB93FF179F95C636320EE8192 (void);
+// 0x0000000A System.Void AppUIManager::OnRetryPossible()
+extern void AppUIManager_OnRetryPossible_m22FBB32007A9BFC6A1066782BAE21FFDAA544108 (void);
+// 0x0000000B System.Void AppUIManager::OnLogout()
+extern void AppUIManager_OnLogout_m135CD94491C688EDB82C4F0FF55422637CFA8F4F (void);
+// 0x0000000C System.Void AppUIManager::ShowPanel(UnityEngine.GameObject)
+extern void AppUIManager_ShowPanel_mC04B8B205BFC5EBE5B1DA2AF250FC0797A508752 (void);
+// 0x0000000D System.Void AppUIManager::.ctor()
+extern void AppUIManager__ctor_m420840C7C865BF2AD0419059A34809815D874891 (void);
+// 0x0000000E System.Void AppUIManager/<StartAppFlow>d__15::.ctor(System.Int32)
+extern void U3CStartAppFlowU3Ed__15__ctor_m570B230835B495A3599A2FE195235D66A5271232 (void);
+// 0x0000000F System.Void AppUIManager/<StartAppFlow>d__15::System.IDisposable.Dispose()
+extern void U3CStartAppFlowU3Ed__15_System_IDisposable_Dispose_m0C17FA14108773AB72E03327A5CFFAF6644371D3 (void);
+// 0x00000010 System.Boolean AppUIManager/<StartAppFlow>d__15::MoveNext()
+extern void U3CStartAppFlowU3Ed__15_MoveNext_mC10BE9393EFDD2BDFE7C31258D8648FC018395DF (void);
+// 0x00000011 System.Object AppUIManager/<StartAppFlow>d__15::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CStartAppFlowU3Ed__15_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m5A66FEE64B966DBCC81C37250A8B83B27499DA19 (void);
+// 0x00000012 System.Void AppUIManager/<StartAppFlow>d__15::System.Collections.IEnumerator.Reset()
+extern void U3CStartAppFlowU3Ed__15_System_Collections_IEnumerator_Reset_m75EFE90B439F7B0DED1E6BAB666588DAF22020F5 (void);
+// 0x00000013 System.Object AppUIManager/<StartAppFlow>d__15::System.Collections.IEnumerator.get_Current()
+extern void U3CStartAppFlowU3Ed__15_System_Collections_IEnumerator_get_Current_m6D8A69C28313573A0A9959901B13FB00F818DB8A (void);
+// 0x00000014 System.Void AppUIManager/<TransitionToAR>d__21::.ctor(System.Int32)
+extern void U3CTransitionToARU3Ed__21__ctor_m60EC75EDC794C0DA7B4D85369C3B8B3E10DF4B9C (void);
+// 0x00000015 System.Void AppUIManager/<TransitionToAR>d__21::System.IDisposable.Dispose()
+extern void U3CTransitionToARU3Ed__21_System_IDisposable_Dispose_m5F53F4FB5B5D1CBB454467CB3BB2F2CA3245A59B (void);
+// 0x00000016 System.Boolean AppUIManager/<TransitionToAR>d__21::MoveNext()
+extern void U3CTransitionToARU3Ed__21_MoveNext_mFCDB9AAB5F9D120BF6E8A7A09399965E2F68D009 (void);
+// 0x00000017 System.Object AppUIManager/<TransitionToAR>d__21::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CTransitionToARU3Ed__21_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m92D28C65D2937668F706A3323263C62903C4297D (void);
+// 0x00000018 System.Void AppUIManager/<TransitionToAR>d__21::System.Collections.IEnumerator.Reset()
+extern void U3CTransitionToARU3Ed__21_System_Collections_IEnumerator_Reset_mB41953AF1BB303F74F3C51066E48B1F004C2555D (void);
+// 0x00000019 System.Object AppUIManager/<TransitionToAR>d__21::System.Collections.IEnumerator.get_Current()
+extern void U3CTransitionToARU3Ed__21_System_Collections_IEnumerator_get_Current_m851CC5606DF6231C2CB1F1CE03104F43C20692CD (void);
+// 0x0000001A System.Void ArButton::Awake()
 extern void ArButton_Awake_m21E1098316ECAC8B78ADF54D24F32CAC859E5966 (void);
-// 0x00000002 System.Void ArButton::Update()
+// 0x0000001B System.Void ArButton::Update()
 extern void ArButton_Update_m79038CEB52CA952E7112E3FC5B22DA3450D147A1 (void);
-// 0x00000003 System.Void ArButton::HandleInput()
+// 0x0000001C System.Void ArButton::HandleInput()
 extern void ArButton_HandleInput_m11E21871ADA141D9CA60EEA22BBA917A7159E3CA (void);
-// 0x00000004 System.Void ArButton::CheckButtonPress(UnityEngine.Vector2)
+// 0x0000001D System.Void ArButton::CheckButtonPress(UnityEngine.Vector2)
 extern void ArButton_CheckButtonPress_m9745A6166A142CC5B9C692268283A09A354FC6C0 (void);
-// 0x00000005 System.Void ArButton::TogglePlayPause()
+// 0x0000001E System.Void ArButton::TogglePlayPause()
 extern void ArButton_TogglePlayPause_mDB939BFCB634E54DD0553A1F88DD40A19603E433 (void);
-// 0x00000006 System.Void ArButton::PlayAnimation(System.String)
+// 0x0000001F System.Void ArButton::PlayAnimation(System.String)
 extern void ArButton_PlayAnimation_mF9394574B3F385C569298DFFDA6F4F129A171FBA (void);
-// 0x00000007 System.Void ArButton::SetVideoPlayer(UnityEngine.Video.VideoPlayer)
+// 0x00000020 System.Void ArButton::SetVideoPlayer(UnityEngine.Video.VideoPlayer)
 extern void ArButton_SetVideoPlayer_mC9EB3C1CE086093460999D36E684BDEAFDCDC9B4 (void);
-// 0x00000008 System.Void ArButton::ResetButton()
+// 0x00000021 System.Void ArButton::ResetButton()
 extern void ArButton_ResetButton_m2332FB9B94C95082A84CB755EFB41B1E17C2601C (void);
-// 0x00000009 System.Void ArButton::.ctor()
+// 0x00000022 System.Void ArButton::.ctor()
 extern void ArButton__ctor_m61B803EAA87251F01EFE1ADAE4275D076DD641DA (void);
-// 0x0000000A System.Void MultiImageVideoManager::Awake()
+// 0x00000023 System.Void HideBeforeVideo::Awake()
+extern void HideBeforeVideo_Awake_mA40B5C5A1421B827D7791D49BFE846D53D02EDA9 (void);
+// 0x00000024 System.Void HideBeforeVideo::OnPrepareCompleted(UnityEngine.Video.VideoPlayer)
+extern void HideBeforeVideo_OnPrepareCompleted_mA55EA5F4F4DD2C24083F0FDCF63FF1D09B84FC10 (void);
+// 0x00000025 System.Void HideBeforeVideo::OnStarted(UnityEngine.Video.VideoPlayer)
+extern void HideBeforeVideo_OnStarted_mABEA4B7E55A914A08364B5DDEE3C39612B67F8B6 (void);
+// 0x00000026 System.Void HideBeforeVideo::OnError(UnityEngine.Video.VideoPlayer,System.String)
+extern void HideBeforeVideo_OnError_m5D797C7CD44B6FFD1C99D927E1F97D29FB2CAEEE (void);
+// 0x00000027 System.Void HideBeforeVideo::OnDestroy()
+extern void HideBeforeVideo_OnDestroy_mC66FF7966F7EB3AE9721528C88A4B11E6CD6028B (void);
+// 0x00000028 System.Void HideBeforeVideo::.ctor()
+extern void HideBeforeVideo__ctor_m0ABB8363F782054CAC6CB6D588DFB344DC4DC81C (void);
+// 0x00000029 System.Void LoginUIEnhancer::Awake()
+extern void LoginUIEnhancer_Awake_m521B59F35E99FC2616903C61406AD278AFB3DF74 (void);
+// 0x0000002A System.Void LoginUIEnhancer::Start()
+extern void LoginUIEnhancer_Start_m1DCF685B9A2FAEF31DCE26DAD7759D809FF9D572 (void);
+// 0x0000002B System.Void LoginUIEnhancer::EnsureEventSystem()
+extern void LoginUIEnhancer_EnsureEventSystem_mEA6CCA1A26524E5F3CA793A4E686E0CBE7B30F0A (void);
+// 0x0000002C System.Void LoginUIEnhancer::EnsureCanvasRaycaster()
+extern void LoginUIEnhancer_EnsureCanvasRaycaster_m2745C2E509B3DCE58D3AA552DC3A6D0A1A90BAC0 (void);
+// 0x0000002D System.Void LoginUIEnhancer::SetupInput()
+extern void LoginUIEnhancer_SetupInput_mF42D2F9C8B3CCF03F60FE90AB066501B89805CD4 (void);
+// 0x0000002E System.Void LoginUIEnhancer::.ctor()
+extern void LoginUIEnhancer__ctor_mDDE9DB22499074DDD50BE6AB2158B2D371E57851 (void);
+// 0x0000002F System.Void LoginUIEnhancer/<>c::.cctor()
+extern void U3CU3Ec__cctor_m697F18548E54FD24C3099C8537EC21B9C86C541C (void);
+// 0x00000030 System.Void LoginUIEnhancer/<>c::.ctor()
+extern void U3CU3Ec__ctor_m7137285F3AAA42D75791206748295D54DA8C5201 (void);
+// 0x00000031 System.Void LoginUIEnhancer/<>c::<SetupInput>b__9_0(System.String)
+extern void U3CU3Ec_U3CSetupInputU3Eb__9_0_m9D9927E2726BB242D2E02BA9339391992875B237 (void);
+// 0x00000032 System.Void LoginUIEnhancer/<>c::<SetupInput>b__9_1()
+extern void U3CU3Ec_U3CSetupInputU3Eb__9_1_m0F4DC4CDD09E75E3A4A9E76AEF67E8F9F1DFB5EE (void);
+// 0x00000033 System.Void MultiImageVideoManager::Awake()
 extern void MultiImageVideoManager_Awake_m95343A139D981237E3399396D3F5046064BC9D6A (void);
-// 0x0000000B System.Void MultiImageVideoManager::OnEnable()
+// 0x00000034 System.Void MultiImageVideoManager::OnEnable()
 extern void MultiImageVideoManager_OnEnable_m1F03F339115A86E21F318429F2BC064090EEA71B (void);
-// 0x0000000C System.Void MultiImageVideoManager::OnDisable()
+// 0x00000035 System.Void MultiImageVideoManager::OnDisable()
 extern void MultiImageVideoManager_OnDisable_mBD01606198120734C635354B9283D0C7AFDC8836 (void);
-// 0x0000000D System.Void MultiImageVideoManager::BuildMappingDictionary()
+// 0x00000036 System.Void MultiImageVideoManager::BuildMappingDictionary()
 extern void MultiImageVideoManager_BuildMappingDictionary_m37B6FF9B328C464B87DAE5DC1CFB3133783416D5 (void);
-// 0x0000000E System.Void MultiImageVideoManager::ValidateMappings()
+// 0x00000037 System.Void MultiImageVideoManager::ValidateMappings()
 extern void MultiImageVideoManager_ValidateMappings_mCD75F55B60D0E4D8356E6D2DD78637ED72F45493 (void);
-// 0x0000000F System.Void MultiImageVideoManager::OnTrackedImagesChanged(UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs)
+// 0x00000038 System.Void MultiImageVideoManager::OnTrackedImagesChanged(UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs)
 extern void MultiImageVideoManager_OnTrackedImagesChanged_m20191907AAB0E41FB3D0C54DBF45759BFC41C023 (void);
-// 0x00000010 System.Void MultiImageVideoManager::HandleTrackedImageAdded(UnityEngine.XR.ARFoundation.ARTrackedImage)
+// 0x00000039 System.Void MultiImageVideoManager::HandleTrackedImageAdded(UnityEngine.XR.ARFoundation.ARTrackedImage)
 extern void MultiImageVideoManager_HandleTrackedImageAdded_m083FD734D6ADE3DBDA4F1981BF2B55CD882BCC5A (void);
-// 0x00000011 System.Void MultiImageVideoManager::HandleTrackedImageUpdated(UnityEngine.XR.ARFoundation.ARTrackedImage)
+// 0x0000003A System.Void MultiImageVideoManager::HandleTrackedImageUpdated(UnityEngine.XR.ARFoundation.ARTrackedImage)
 extern void MultiImageVideoManager_HandleTrackedImageUpdated_m302D46C31D764A30D61D542AFA9A7DE9ED1D077B (void);
-// 0x00000012 System.Void MultiImageVideoManager::HandleTrackedImageRemoved(UnityEngine.XR.ARFoundation.ARTrackedImage)
+// 0x0000003B System.Void MultiImageVideoManager::HandleTrackedImageRemoved(UnityEngine.XR.ARFoundation.ARTrackedImage)
 extern void MultiImageVideoManager_HandleTrackedImageRemoved_m7603B506247060B667E6C243C4CDFD89AF7987BE (void);
-// 0x00000013 MultiImageVideoManager/ImageVideoMapping MultiImageVideoManager::GetMappingForImage(System.String)
+// 0x0000003C MultiImageVideoManager/ImageVideoMapping MultiImageVideoManager::GetMappingForImage(System.String)
 extern void MultiImageVideoManager_GetMappingForImage_m2916DE1BE98C78742CE004F18D50003B54F2440A (void);
-// 0x00000014 System.Void MultiImageVideoManager::InstantiatePrefabForImage(UnityEngine.XR.ARFoundation.ARTrackedImage,MultiImageVideoManager/ImageVideoMapping)
+// 0x0000003D System.Void MultiImageVideoManager::InstantiatePrefabForImage(UnityEngine.XR.ARFoundation.ARTrackedImage,MultiImageVideoManager/ImageVideoMapping)
 extern void MultiImageVideoManager_InstantiatePrefabForImage_mF6BAAC44B3885EB514501FFE3DE9815648C4EB8D (void);
-// 0x00000015 System.Void MultiImageVideoManager::UpdatePrefabTransform(UnityEngine.XR.ARFoundation.ARTrackedImage,UnityEngine.GameObject)
+// 0x0000003E System.Void MultiImageVideoManager::UpdatePrefabTransform(UnityEngine.XR.ARFoundation.ARTrackedImage,UnityEngine.GameObject)
 extern void MultiImageVideoManager_UpdatePrefabTransform_m5B39BBD71CBE2FA33E54DEC79166840A238AF683 (void);
-// 0x00000016 System.Void MultiImageVideoManager::SetVideoSource(UnityEngine.GameObject,System.String)
+// 0x0000003F System.Void MultiImageVideoManager::SetVideoSource(UnityEngine.GameObject,System.String)
 extern void MultiImageVideoManager_SetVideoSource_m389E9D61810BE0D5383FD900DB6AB1A5441B3938 (void);
-// 0x00000017 System.Void MultiImageVideoManager::AddImageVideoMapping(System.String,UnityEngine.GameObject,System.String)
+// 0x00000040 System.Void MultiImageVideoManager::AddImageVideoMapping(System.String,UnityEngine.GameObject,System.String)
 extern void MultiImageVideoManager_AddImageVideoMapping_mB60251C17C08078BACED1FE95FBFEC2C4A93990F (void);
-// 0x00000018 System.Void MultiImageVideoManager::ResetAllVideos()
+// 0x00000041 System.Void MultiImageVideoManager::ResetAllVideos()
 extern void MultiImageVideoManager_ResetAllVideos_mA90AD064CBAAA6CAC6989047C19DFABACF001BCD (void);
-// 0x00000019 System.Void MultiImageVideoManager::.ctor()
+// 0x00000042 System.Void MultiImageVideoManager::InitializeRuntime(UnityEngine.XR.ARSubsystems.MutableRuntimeReferenceImageLibrary,System.String)
+extern void MultiImageVideoManager_InitializeRuntime_m5A5FA1A11E422AA00C8857D271B9E61C7F268B8B (void);
+// 0x00000043 System.Void MultiImageVideoManager::.ctor()
 extern void MultiImageVideoManager__ctor_m593DA0742D07785EB22316B5CDC46CF544FB13EE (void);
-// 0x0000001A System.Void MultiImageVideoManager/ImageVideoMapping::.ctor()
+// 0x00000044 System.Void MultiImageVideoManager/ImageVideoMapping::.ctor()
 extern void ImageVideoMapping__ctor_m5649273AF1856974315A0F0C59610BD146BF7737 (void);
-// 0x0000001B System.Void VideoAnimControl::Awake()
+// 0x00000045 System.Void RuntimeWeddingLoader::add_OnProgressUpdated(System.Action`1<System.Single>)
+extern void RuntimeWeddingLoader_add_OnProgressUpdated_mCADD3329C225534497F6BB1C5DEF053A7C8576BC (void);
+// 0x00000046 System.Void RuntimeWeddingLoader::remove_OnProgressUpdated(System.Action`1<System.Single>)
+extern void RuntimeWeddingLoader_remove_OnProgressUpdated_mDB83BB098D927EF446487C3B55F5209759167C24 (void);
+// 0x00000047 System.Void RuntimeWeddingLoader::add_OnAssetsLoaded(System.Action`2<UnityEngine.XR.ARSubsystems.MutableRuntimeReferenceImageLibrary,System.String>)
+extern void RuntimeWeddingLoader_add_OnAssetsLoaded_mF34A933A2301C4351B449E1281D0356F31CDEF30 (void);
+// 0x00000048 System.Void RuntimeWeddingLoader::remove_OnAssetsLoaded(System.Action`2<UnityEngine.XR.ARSubsystems.MutableRuntimeReferenceImageLibrary,System.String>)
+extern void RuntimeWeddingLoader_remove_OnAssetsLoaded_m6B967BFCE27D9C5BAFDB6160B2DBB53CD1AB3645 (void);
+// 0x00000049 System.Void RuntimeWeddingLoader::add_OnError(System.Action`1<System.String>)
+extern void RuntimeWeddingLoader_add_OnError_m6636BDACE05A203F10E8E9FE244B6FCC976E972D (void);
+// 0x0000004A System.Void RuntimeWeddingLoader::remove_OnError(System.Action`1<System.String>)
+extern void RuntimeWeddingLoader_remove_OnError_m57D11541771F756971FB62EAB3191D37FB82DE14 (void);
+// 0x0000004B System.Void RuntimeWeddingLoader::add_OnRetryPossible(System.Action)
+extern void RuntimeWeddingLoader_add_OnRetryPossible_mF4BBAEED8C08B41F321FFA636CE74EAB0F577015 (void);
+// 0x0000004C System.Void RuntimeWeddingLoader::remove_OnRetryPossible(System.Action)
+extern void RuntimeWeddingLoader_remove_OnRetryPossible_m71792B189155796CA3F87AA99F3547F0E07F12D8 (void);
+// 0x0000004D System.Void RuntimeWeddingLoader::Start()
+extern void RuntimeWeddingLoader_Start_mF9BC0A64CECBCEC7F4A732EF323E229C62E33B67 (void);
+// 0x0000004E System.Void RuntimeWeddingLoader::LoadForClient(System.String)
+extern void RuntimeWeddingLoader_LoadForClient_m986FE541C96099AD441A8744E4A1B8B333D628AD (void);
+// 0x0000004F System.Void RuntimeWeddingLoader::Retry()
+extern void RuntimeWeddingLoader_Retry_m45C8753031080035FB8BAC16FBC5D718CE3E70B7 (void);
+// 0x00000050 System.Collections.IEnumerator RuntimeWeddingLoader::LoadAssetsRoutine()
+extern void RuntimeWeddingLoader_LoadAssetsRoutine_m15EB2397FFED30AF777B56C3FDB33BC9F79EA909 (void);
+// 0x00000051 System.Void RuntimeWeddingLoader::EnsureDirectory(System.String)
+extern void RuntimeWeddingLoader_EnsureDirectory_m7937FDBD53E604C698A1F86E0F9F6CCFB8C9544A (void);
+// 0x00000052 System.Boolean RuntimeWeddingLoader::CheckIfCachedFilesExist(RuntimeWeddingLoader/AssetResponse)
+extern void RuntimeWeddingLoader_CheckIfCachedFilesExist_m2A945941EC19AA1D7C86B367A540C144F25279AB (void);
+// 0x00000053 System.Collections.IEnumerator RuntimeWeddingLoader::DownloadFileIfNeeded(System.String,System.String)
+extern void RuntimeWeddingLoader_DownloadFileIfNeeded_m56E1CAAAD530466AAFFCE780D5B71E004821DDB8 (void);
+// 0x00000054 System.Collections.IEnumerator RuntimeWeddingLoader::BuildReferenceLibrary()
+extern void RuntimeWeddingLoader_BuildReferenceLibrary_mA2AE208AD885EFC99373979BBCF625D905E78870 (void);
+// 0x00000055 System.String RuntimeWeddingLoader::GetFileNameFromUrl(System.String,System.String)
+extern void RuntimeWeddingLoader_GetFileNameFromUrl_mDA2A8414E12E4F6A6823C8639E9307261C3F3C2B (void);
+// 0x00000056 System.Void RuntimeWeddingLoader::HandleError(System.String)
+extern void RuntimeWeddingLoader_HandleError_mDC221EBBAE5828A3DBA1D4984B60228B323F574F (void);
+// 0x00000057 System.Void RuntimeWeddingLoader::.ctor()
+extern void RuntimeWeddingLoader__ctor_m93EB4A9BC7C0825476308BA1A149FBB965172747 (void);
+// 0x00000058 System.Void RuntimeWeddingLoader/AssetResponse::.ctor()
+extern void AssetResponse__ctor_mF40BF1F061A9FE419BDEAD31AEE9EF44A1A572F1 (void);
+// 0x00000059 System.Void RuntimeWeddingLoader/<LoadAssetsRoutine>d__25::.ctor(System.Int32)
+extern void U3CLoadAssetsRoutineU3Ed__25__ctor_mAFAD1A399C73230014B4DD951A7CF17ACEC6719A (void);
+// 0x0000005A System.Void RuntimeWeddingLoader/<LoadAssetsRoutine>d__25::System.IDisposable.Dispose()
+extern void U3CLoadAssetsRoutineU3Ed__25_System_IDisposable_Dispose_m31BF767F6A8F46B17F0E4C53D175A5362B9B2308 (void);
+// 0x0000005B System.Boolean RuntimeWeddingLoader/<LoadAssetsRoutine>d__25::MoveNext()
+extern void U3CLoadAssetsRoutineU3Ed__25_MoveNext_m19EBB43FDEB75C6295A80CD64A825D4D08562E78 (void);
+// 0x0000005C System.Object RuntimeWeddingLoader/<LoadAssetsRoutine>d__25::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CLoadAssetsRoutineU3Ed__25_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mADDB47046783E072CED24DBF9C8624F587ED753C (void);
+// 0x0000005D System.Void RuntimeWeddingLoader/<LoadAssetsRoutine>d__25::System.Collections.IEnumerator.Reset()
+extern void U3CLoadAssetsRoutineU3Ed__25_System_Collections_IEnumerator_Reset_mB75DAABF250B627C348875203A8B77E926EE3CC5 (void);
+// 0x0000005E System.Object RuntimeWeddingLoader/<LoadAssetsRoutine>d__25::System.Collections.IEnumerator.get_Current()
+extern void U3CLoadAssetsRoutineU3Ed__25_System_Collections_IEnumerator_get_Current_mC6A928C68C6B26A0ECC7E3740253FF628E818566 (void);
+// 0x0000005F System.Void RuntimeWeddingLoader/<DownloadFileIfNeeded>d__28::.ctor(System.Int32)
+extern void U3CDownloadFileIfNeededU3Ed__28__ctor_m2B62D33B6950324A931B536E2A596B64F3171303 (void);
+// 0x00000060 System.Void RuntimeWeddingLoader/<DownloadFileIfNeeded>d__28::System.IDisposable.Dispose()
+extern void U3CDownloadFileIfNeededU3Ed__28_System_IDisposable_Dispose_mE0CDD983D1EC786211943C627882C478053966F0 (void);
+// 0x00000061 System.Boolean RuntimeWeddingLoader/<DownloadFileIfNeeded>d__28::MoveNext()
+extern void U3CDownloadFileIfNeededU3Ed__28_MoveNext_m58113540BD3C2CF479F69AE2C3C33E6EA96DC556 (void);
+// 0x00000062 System.Void RuntimeWeddingLoader/<DownloadFileIfNeeded>d__28::<>m__Finally1()
+extern void U3CDownloadFileIfNeededU3Ed__28_U3CU3Em__Finally1_mF5315F0BC76CAC9CEFABC540CE521DA84A119568 (void);
+// 0x00000063 System.Object RuntimeWeddingLoader/<DownloadFileIfNeeded>d__28::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CDownloadFileIfNeededU3Ed__28_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m327BB9295C38CF2D0BF484A16FADCA38C6786F41 (void);
+// 0x00000064 System.Void RuntimeWeddingLoader/<DownloadFileIfNeeded>d__28::System.Collections.IEnumerator.Reset()
+extern void U3CDownloadFileIfNeededU3Ed__28_System_Collections_IEnumerator_Reset_mE229C412D1403BC642348FE03DED682554475F05 (void);
+// 0x00000065 System.Object RuntimeWeddingLoader/<DownloadFileIfNeeded>d__28::System.Collections.IEnumerator.get_Current()
+extern void U3CDownloadFileIfNeededU3Ed__28_System_Collections_IEnumerator_get_Current_mF2FF0847A952DD3488DBDB7B95B14BCED2C1CB8F (void);
+// 0x00000066 System.Void RuntimeWeddingLoader/<BuildReferenceLibrary>d__29::.ctor(System.Int32)
+extern void U3CBuildReferenceLibraryU3Ed__29__ctor_m791457522522AA6E843BCBFBD171EA8FB37A7095 (void);
+// 0x00000067 System.Void RuntimeWeddingLoader/<BuildReferenceLibrary>d__29::System.IDisposable.Dispose()
+extern void U3CBuildReferenceLibraryU3Ed__29_System_IDisposable_Dispose_m76D6767D0ECA1A59DA19A1701E68937AD7DD8DDE (void);
+// 0x00000068 System.Boolean RuntimeWeddingLoader/<BuildReferenceLibrary>d__29::MoveNext()
+extern void U3CBuildReferenceLibraryU3Ed__29_MoveNext_m44C1A420DC3C34D4B65ACBAA64DE5E87F980CA84 (void);
+// 0x00000069 System.Void RuntimeWeddingLoader/<BuildReferenceLibrary>d__29::<>m__Finally1()
+extern void U3CBuildReferenceLibraryU3Ed__29_U3CU3Em__Finally1_m3F20FB2CD288DD15EC3E4B95C73E533E814B8C52 (void);
+// 0x0000006A System.Object RuntimeWeddingLoader/<BuildReferenceLibrary>d__29::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CBuildReferenceLibraryU3Ed__29_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mA806FAE388A22C9D013622E1C41E7C7256093030 (void);
+// 0x0000006B System.Void RuntimeWeddingLoader/<BuildReferenceLibrary>d__29::System.Collections.IEnumerator.Reset()
+extern void U3CBuildReferenceLibraryU3Ed__29_System_Collections_IEnumerator_Reset_m98019746324238554087B6083A0BD4EB0C37263B (void);
+// 0x0000006C System.Object RuntimeWeddingLoader/<BuildReferenceLibrary>d__29::System.Collections.IEnumerator.get_Current()
+extern void U3CBuildReferenceLibraryU3Ed__29_System_Collections_IEnumerator_get_Current_m092892E9D64D7CE06319241CC0A4ACFD9B5FDC5A (void);
+// 0x0000006D System.Void VideoAnimControl::Awake()
 extern void VideoAnimControl_Awake_mB076CA9FB1D7A929DB4A83D0DC073B6690AECBB6 (void);
-// 0x0000001C System.Void VideoAnimControl::Start()
+// 0x0000006E System.Void VideoAnimControl::Start()
 extern void VideoAnimControl_Start_m68F9774DEE974459ECFCAD10EA6BB6CBDDFB997B (void);
-// 0x0000001D System.Void VideoAnimControl::Update()
+// 0x0000006F System.Void VideoAnimControl::Update()
 extern void VideoAnimControl_Update_mAE088923A4B1DD1C192DCEC2EDE567294FF047C7 (void);
-// 0x0000001E System.Void VideoAnimControl::InitializeComponents()
+// 0x00000070 System.Void VideoAnimControl::InitializeComponents()
 extern void VideoAnimControl_InitializeComponents_mAB70BEFF3890ABE4860396EA1296959A4114689F (void);
-// 0x0000001F System.Void VideoAnimControl::ScaleVideoToTrackedImage()
+// 0x00000071 System.Void VideoAnimControl::ScaleVideoToTrackedImage()
 extern void VideoAnimControl_ScaleVideoToTrackedImage_mBF8368EBCE2AB01F142F952D94C866CA87634AD3 (void);
-// 0x00000020 System.Void VideoAnimControl::UpdateScaleIfNeeded()
+// 0x00000072 System.Void VideoAnimControl::UpdateScaleIfNeeded()
 extern void VideoAnimControl_UpdateScaleIfNeeded_m75689A4F23182F1478A25E0BA0DC40D55A006DC6 (void);
-// 0x00000021 System.Void VideoAnimControl::CheckVideoEnd()
+// 0x00000073 System.Void VideoAnimControl::CheckVideoEnd()
 extern void VideoAnimControl_CheckVideoEnd_m7C22E27CC7777F3DF1D1DD5DE98F0FE30E769D87 (void);
-// 0x00000022 System.Void VideoAnimControl::TriggerEndAnimation()
+// 0x00000074 System.Void VideoAnimControl::TriggerEndAnimation()
 extern void VideoAnimControl_TriggerEndAnimation_m09954E91452481B3CCF011F6F9C40C56AE73318F (void);
-// 0x00000023 System.Void VideoAnimControl::ResetVideo()
+// 0x00000075 System.Void VideoAnimControl::ResetVideo()
 extern void VideoAnimControl_ResetVideo_m4120B0612C35CEADE493B62BEB5A6EB20882A468 (void);
-// 0x00000024 System.Void VideoAnimControl::SetVideoPlayer(UnityEngine.Video.VideoPlayer)
+// 0x00000076 System.Void VideoAnimControl::SetVideoPlayer(UnityEngine.Video.VideoPlayer)
 extern void VideoAnimControl_SetVideoPlayer_m78B44E2296BF9EEA469C89525020248558369B0B (void);
-// 0x00000025 System.Void VideoAnimControl::SetTrackedImage(UnityEngine.XR.ARFoundation.ARTrackedImage)
+// 0x00000077 System.Void VideoAnimControl::SetTrackedImage(UnityEngine.XR.ARFoundation.ARTrackedImage)
 extern void VideoAnimControl_SetTrackedImage_m1DF17963DBAB47E72760F4619E5E1466116DF507 (void);
-// 0x00000026 System.Void VideoAnimControl::.ctor()
+// 0x00000078 System.Collections.IEnumerator VideoAnimControl::FadeAudioIn()
+extern void VideoAnimControl_FadeAudioIn_m4349EFBC0218D26EEFCDD2F6D2E1A41DE5FC70B3 (void);
+// 0x00000079 System.Void VideoAnimControl::SetVolume(System.Single)
+extern void VideoAnimControl_SetVolume_mDE3A4D453FD1703910615F06FC8B752AA3F88580 (void);
+// 0x0000007A System.Void VideoAnimControl::.ctor()
 extern void VideoAnimControl__ctor_m9D44101F10E874D16AF2D7D238BEDBA59F80B2F4 (void);
-static Il2CppMethodPointer s_methodPointers[38] = 
+// 0x0000007B System.Void VideoAnimControl/<FadeAudioIn>d__22::.ctor(System.Int32)
+extern void U3CFadeAudioInU3Ed__22__ctor_mC57F5BE4DA211D9164F9C17B01D79ACC691FEAD6 (void);
+// 0x0000007C System.Void VideoAnimControl/<FadeAudioIn>d__22::System.IDisposable.Dispose()
+extern void U3CFadeAudioInU3Ed__22_System_IDisposable_Dispose_m3B35989EBC05A67B5777F8AFCCD8CC9BD90F2519 (void);
+// 0x0000007D System.Boolean VideoAnimControl/<FadeAudioIn>d__22::MoveNext()
+extern void U3CFadeAudioInU3Ed__22_MoveNext_mBDE6092BE90F5DF579EE478A0CA0D7CF46A7B7E8 (void);
+// 0x0000007E System.Object VideoAnimControl/<FadeAudioIn>d__22::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CFadeAudioInU3Ed__22_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m2D07F3A62B8D1F08662C66BC5E8CB438F5BDB310 (void);
+// 0x0000007F System.Void VideoAnimControl/<FadeAudioIn>d__22::System.Collections.IEnumerator.Reset()
+extern void U3CFadeAudioInU3Ed__22_System_Collections_IEnumerator_Reset_mD9CB70C179CF4E4319DA60C224CBBB873C95C37A (void);
+// 0x00000080 System.Object VideoAnimControl/<FadeAudioIn>d__22::System.Collections.IEnumerator.get_Current()
+extern void U3CFadeAudioInU3Ed__22_System_Collections_IEnumerator_get_Current_mDD8E94F088B5B657AA61D9EC67B2593DAE7AAA12 (void);
+static Il2CppMethodPointer s_methodPointers[128] = 
 {
+	AppUIManager_Start_m234F755093C24EF05043D008EB9D04B6C34CC993,
+	AppUIManager_StartAppFlow_m0093F3927CBACF33A6C87CECFF10AD53AE4E0814,
+	AppUIManager_OnLoginClicked_m5520EE9EF1E05D9976173366965F7D75D74B91D3,
+	AppUIManager_StartLoading_m410AD2FEEC5D9AD63F75BC06A204245C14463AA8,
+	AppUIManager_OnRetryClicked_m87106F451F3D951E04EF7FB54C0B28453215929B,
+	AppUIManager_UpdateProgress_mDFCF21A6097490F7D2D7A308B3A4EABA01AE0BF0,
+	AppUIManager_OnAssetsReady_mE959233DB1DF31D1887155B3B4DC20F2C0A05615,
+	AppUIManager_TransitionToAR_mE81FA0AF4F1156690F84023060B1AFFE68F5758F,
+	AppUIManager_OnError_m3E7765E4304A33AFB93FF179F95C636320EE8192,
+	AppUIManager_OnRetryPossible_m22FBB32007A9BFC6A1066782BAE21FFDAA544108,
+	AppUIManager_OnLogout_m135CD94491C688EDB82C4F0FF55422637CFA8F4F,
+	AppUIManager_ShowPanel_mC04B8B205BFC5EBE5B1DA2AF250FC0797A508752,
+	AppUIManager__ctor_m420840C7C865BF2AD0419059A34809815D874891,
+	U3CStartAppFlowU3Ed__15__ctor_m570B230835B495A3599A2FE195235D66A5271232,
+	U3CStartAppFlowU3Ed__15_System_IDisposable_Dispose_m0C17FA14108773AB72E03327A5CFFAF6644371D3,
+	U3CStartAppFlowU3Ed__15_MoveNext_mC10BE9393EFDD2BDFE7C31258D8648FC018395DF,
+	U3CStartAppFlowU3Ed__15_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m5A66FEE64B966DBCC81C37250A8B83B27499DA19,
+	U3CStartAppFlowU3Ed__15_System_Collections_IEnumerator_Reset_m75EFE90B439F7B0DED1E6BAB666588DAF22020F5,
+	U3CStartAppFlowU3Ed__15_System_Collections_IEnumerator_get_Current_m6D8A69C28313573A0A9959901B13FB00F818DB8A,
+	U3CTransitionToARU3Ed__21__ctor_m60EC75EDC794C0DA7B4D85369C3B8B3E10DF4B9C,
+	U3CTransitionToARU3Ed__21_System_IDisposable_Dispose_m5F53F4FB5B5D1CBB454467CB3BB2F2CA3245A59B,
+	U3CTransitionToARU3Ed__21_MoveNext_mFCDB9AAB5F9D120BF6E8A7A09399965E2F68D009,
+	U3CTransitionToARU3Ed__21_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m92D28C65D2937668F706A3323263C62903C4297D,
+	U3CTransitionToARU3Ed__21_System_Collections_IEnumerator_Reset_mB41953AF1BB303F74F3C51066E48B1F004C2555D,
+	U3CTransitionToARU3Ed__21_System_Collections_IEnumerator_get_Current_m851CC5606DF6231C2CB1F1CE03104F43C20692CD,
 	ArButton_Awake_m21E1098316ECAC8B78ADF54D24F32CAC859E5966,
 	ArButton_Update_m79038CEB52CA952E7112E3FC5B22DA3450D147A1,
 	ArButton_HandleInput_m11E21871ADA141D9CA60EEA22BBA917A7159E3CA,
@@ -99,6 +304,22 @@ static Il2CppMethodPointer s_methodPointers[38] =
 	ArButton_SetVideoPlayer_mC9EB3C1CE086093460999D36E684BDEAFDCDC9B4,
 	ArButton_ResetButton_m2332FB9B94C95082A84CB755EFB41B1E17C2601C,
 	ArButton__ctor_m61B803EAA87251F01EFE1ADAE4275D076DD641DA,
+	HideBeforeVideo_Awake_mA40B5C5A1421B827D7791D49BFE846D53D02EDA9,
+	HideBeforeVideo_OnPrepareCompleted_mA55EA5F4F4DD2C24083F0FDCF63FF1D09B84FC10,
+	HideBeforeVideo_OnStarted_mABEA4B7E55A914A08364B5DDEE3C39612B67F8B6,
+	HideBeforeVideo_OnError_m5D797C7CD44B6FFD1C99D927E1F97D29FB2CAEEE,
+	HideBeforeVideo_OnDestroy_mC66FF7966F7EB3AE9721528C88A4B11E6CD6028B,
+	HideBeforeVideo__ctor_m0ABB8363F782054CAC6CB6D588DFB344DC4DC81C,
+	LoginUIEnhancer_Awake_m521B59F35E99FC2616903C61406AD278AFB3DF74,
+	LoginUIEnhancer_Start_m1DCF685B9A2FAEF31DCE26DAD7759D809FF9D572,
+	LoginUIEnhancer_EnsureEventSystem_mEA6CCA1A26524E5F3CA793A4E686E0CBE7B30F0A,
+	LoginUIEnhancer_EnsureCanvasRaycaster_m2745C2E509B3DCE58D3AA552DC3A6D0A1A90BAC0,
+	LoginUIEnhancer_SetupInput_mF42D2F9C8B3CCF03F60FE90AB066501B89805CD4,
+	LoginUIEnhancer__ctor_mDDE9DB22499074DDD50BE6AB2158B2D371E57851,
+	U3CU3Ec__cctor_m697F18548E54FD24C3099C8537EC21B9C86C541C,
+	U3CU3Ec__ctor_m7137285F3AAA42D75791206748295D54DA8C5201,
+	U3CU3Ec_U3CSetupInputU3Eb__9_0_m9D9927E2726BB242D2E02BA9339391992875B237,
+	U3CU3Ec_U3CSetupInputU3Eb__9_1_m0F4DC4CDD09E75E3A4A9E76AEF67E8F9F1DFB5EE,
 	MultiImageVideoManager_Awake_m95343A139D981237E3399396D3F5046064BC9D6A,
 	MultiImageVideoManager_OnEnable_m1F03F339115A86E21F318429F2BC064090EEA71B,
 	MultiImageVideoManager_OnDisable_mBD01606198120734C635354B9283D0C7AFDC8836,
@@ -114,8 +335,49 @@ static Il2CppMethodPointer s_methodPointers[38] =
 	MultiImageVideoManager_SetVideoSource_m389E9D61810BE0D5383FD900DB6AB1A5441B3938,
 	MultiImageVideoManager_AddImageVideoMapping_mB60251C17C08078BACED1FE95FBFEC2C4A93990F,
 	MultiImageVideoManager_ResetAllVideos_mA90AD064CBAAA6CAC6989047C19DFABACF001BCD,
+	MultiImageVideoManager_InitializeRuntime_m5A5FA1A11E422AA00C8857D271B9E61C7F268B8B,
 	MultiImageVideoManager__ctor_m593DA0742D07785EB22316B5CDC46CF544FB13EE,
 	ImageVideoMapping__ctor_m5649273AF1856974315A0F0C59610BD146BF7737,
+	RuntimeWeddingLoader_add_OnProgressUpdated_mCADD3329C225534497F6BB1C5DEF053A7C8576BC,
+	RuntimeWeddingLoader_remove_OnProgressUpdated_mDB83BB098D927EF446487C3B55F5209759167C24,
+	RuntimeWeddingLoader_add_OnAssetsLoaded_mF34A933A2301C4351B449E1281D0356F31CDEF30,
+	RuntimeWeddingLoader_remove_OnAssetsLoaded_m6B967BFCE27D9C5BAFDB6160B2DBB53CD1AB3645,
+	RuntimeWeddingLoader_add_OnError_m6636BDACE05A203F10E8E9FE244B6FCC976E972D,
+	RuntimeWeddingLoader_remove_OnError_m57D11541771F756971FB62EAB3191D37FB82DE14,
+	RuntimeWeddingLoader_add_OnRetryPossible_mF4BBAEED8C08B41F321FFA636CE74EAB0F577015,
+	RuntimeWeddingLoader_remove_OnRetryPossible_m71792B189155796CA3F87AA99F3547F0E07F12D8,
+	RuntimeWeddingLoader_Start_mF9BC0A64CECBCEC7F4A732EF323E229C62E33B67,
+	RuntimeWeddingLoader_LoadForClient_m986FE541C96099AD441A8744E4A1B8B333D628AD,
+	RuntimeWeddingLoader_Retry_m45C8753031080035FB8BAC16FBC5D718CE3E70B7,
+	RuntimeWeddingLoader_LoadAssetsRoutine_m15EB2397FFED30AF777B56C3FDB33BC9F79EA909,
+	RuntimeWeddingLoader_EnsureDirectory_m7937FDBD53E604C698A1F86E0F9F6CCFB8C9544A,
+	RuntimeWeddingLoader_CheckIfCachedFilesExist_m2A945941EC19AA1D7C86B367A540C144F25279AB,
+	RuntimeWeddingLoader_DownloadFileIfNeeded_m56E1CAAAD530466AAFFCE780D5B71E004821DDB8,
+	RuntimeWeddingLoader_BuildReferenceLibrary_mA2AE208AD885EFC99373979BBCF625D905E78870,
+	RuntimeWeddingLoader_GetFileNameFromUrl_mDA2A8414E12E4F6A6823C8639E9307261C3F3C2B,
+	RuntimeWeddingLoader_HandleError_mDC221EBBAE5828A3DBA1D4984B60228B323F574F,
+	RuntimeWeddingLoader__ctor_m93EB4A9BC7C0825476308BA1A149FBB965172747,
+	AssetResponse__ctor_mF40BF1F061A9FE419BDEAD31AEE9EF44A1A572F1,
+	U3CLoadAssetsRoutineU3Ed__25__ctor_mAFAD1A399C73230014B4DD951A7CF17ACEC6719A,
+	U3CLoadAssetsRoutineU3Ed__25_System_IDisposable_Dispose_m31BF767F6A8F46B17F0E4C53D175A5362B9B2308,
+	U3CLoadAssetsRoutineU3Ed__25_MoveNext_m19EBB43FDEB75C6295A80CD64A825D4D08562E78,
+	U3CLoadAssetsRoutineU3Ed__25_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mADDB47046783E072CED24DBF9C8624F587ED753C,
+	U3CLoadAssetsRoutineU3Ed__25_System_Collections_IEnumerator_Reset_mB75DAABF250B627C348875203A8B77E926EE3CC5,
+	U3CLoadAssetsRoutineU3Ed__25_System_Collections_IEnumerator_get_Current_mC6A928C68C6B26A0ECC7E3740253FF628E818566,
+	U3CDownloadFileIfNeededU3Ed__28__ctor_m2B62D33B6950324A931B536E2A596B64F3171303,
+	U3CDownloadFileIfNeededU3Ed__28_System_IDisposable_Dispose_mE0CDD983D1EC786211943C627882C478053966F0,
+	U3CDownloadFileIfNeededU3Ed__28_MoveNext_m58113540BD3C2CF479F69AE2C3C33E6EA96DC556,
+	U3CDownloadFileIfNeededU3Ed__28_U3CU3Em__Finally1_mF5315F0BC76CAC9CEFABC540CE521DA84A119568,
+	U3CDownloadFileIfNeededU3Ed__28_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m327BB9295C38CF2D0BF484A16FADCA38C6786F41,
+	U3CDownloadFileIfNeededU3Ed__28_System_Collections_IEnumerator_Reset_mE229C412D1403BC642348FE03DED682554475F05,
+	U3CDownloadFileIfNeededU3Ed__28_System_Collections_IEnumerator_get_Current_mF2FF0847A952DD3488DBDB7B95B14BCED2C1CB8F,
+	U3CBuildReferenceLibraryU3Ed__29__ctor_m791457522522AA6E843BCBFBD171EA8FB37A7095,
+	U3CBuildReferenceLibraryU3Ed__29_System_IDisposable_Dispose_m76D6767D0ECA1A59DA19A1701E68937AD7DD8DDE,
+	U3CBuildReferenceLibraryU3Ed__29_MoveNext_m44C1A420DC3C34D4B65ACBAA64DE5E87F980CA84,
+	U3CBuildReferenceLibraryU3Ed__29_U3CU3Em__Finally1_m3F20FB2CD288DD15EC3E4B95C73E533E814B8C52,
+	U3CBuildReferenceLibraryU3Ed__29_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mA806FAE388A22C9D013622E1C41E7C7256093030,
+	U3CBuildReferenceLibraryU3Ed__29_System_Collections_IEnumerator_Reset_m98019746324238554087B6083A0BD4EB0C37263B,
+	U3CBuildReferenceLibraryU3Ed__29_System_Collections_IEnumerator_get_Current_m092892E9D64D7CE06319241CC0A4ACFD9B5FDC5A,
 	VideoAnimControl_Awake_mB076CA9FB1D7A929DB4A83D0DC073B6690AECBB6,
 	VideoAnimControl_Start_m68F9774DEE974459ECFCAD10EA6BB6CBDDFB997B,
 	VideoAnimControl_Update_mAE088923A4B1DD1C192DCEC2EDE567294FF047C7,
@@ -127,54 +389,152 @@ static Il2CppMethodPointer s_methodPointers[38] =
 	VideoAnimControl_ResetVideo_m4120B0612C35CEADE493B62BEB5A6EB20882A468,
 	VideoAnimControl_SetVideoPlayer_m78B44E2296BF9EEA469C89525020248558369B0B,
 	VideoAnimControl_SetTrackedImage_m1DF17963DBAB47E72760F4619E5E1466116DF507,
+	VideoAnimControl_FadeAudioIn_m4349EFBC0218D26EEFCDD2F6D2E1A41DE5FC70B3,
+	VideoAnimControl_SetVolume_mDE3A4D453FD1703910615F06FC8B752AA3F88580,
 	VideoAnimControl__ctor_m9D44101F10E874D16AF2D7D238BEDBA59F80B2F4,
+	U3CFadeAudioInU3Ed__22__ctor_mC57F5BE4DA211D9164F9C17B01D79ACC691FEAD6,
+	U3CFadeAudioInU3Ed__22_System_IDisposable_Dispose_m3B35989EBC05A67B5777F8AFCCD8CC9BD90F2519,
+	U3CFadeAudioInU3Ed__22_MoveNext_mBDE6092BE90F5DF579EE478A0CA0D7CF46A7B7E8,
+	U3CFadeAudioInU3Ed__22_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m2D07F3A62B8D1F08662C66BC5E8CB438F5BDB310,
+	U3CFadeAudioInU3Ed__22_System_Collections_IEnumerator_Reset_mD9CB70C179CF4E4319DA60C224CBBB873C95C37A,
+	U3CFadeAudioInU3Ed__22_System_Collections_IEnumerator_get_Current_mDD8E94F088B5B657AA61D9EC67B2593DAE7AAA12,
 };
-static const int32_t s_InvokerIndices[38] = 
+static const int32_t s_InvokerIndices[128] = 
 {
-	5423,
-	5423,
-	5423,
-	4393,
-	5423,
-	4312,
-	4312,
-	5423,
-	5423,
-	5423,
-	5423,
-	5423,
-	5423,
-	5423,
-	4208,
-	4312,
-	4312,
-	4312,
-	3765,
-	2282,
-	2282,
-	2282,
-	1161,
-	5423,
-	5423,
-	5423,
-	5423,
-	5423,
-	5423,
-	5423,
-	5423,
-	5423,
-	5423,
-	5423,
-	5423,
-	4312,
-	4312,
-	5423,
+	5428,
+	5321,
+	5428,
+	4317,
+	5428,
+	4351,
+	2285,
+	5321,
+	4317,
+	5428,
+	5428,
+	4317,
+	5428,
+	4291,
+	5428,
+	5232,
+	5321,
+	5428,
+	5321,
+	4291,
+	5428,
+	5232,
+	5321,
+	5428,
+	5321,
+	5428,
+	5428,
+	5428,
+	4398,
+	5428,
+	4317,
+	4317,
+	5428,
+	5428,
+	5428,
+	4317,
+	4317,
+	2285,
+	5428,
+	5428,
+	5428,
+	5428,
+	5428,
+	5428,
+	5428,
+	5428,
+	8505,
+	5428,
+	4317,
+	5428,
+	5428,
+	5428,
+	5428,
+	5428,
+	5428,
+	4213,
+	4317,
+	4317,
+	4317,
+	3770,
+	2285,
+	2285,
+	2285,
+	1163,
+	5428,
+	2285,
+	5428,
+	5428,
+	4317,
+	4317,
+	4317,
+	4317,
+	4317,
+	4317,
+	4317,
+	4317,
+	5428,
+	4317,
+	5428,
+	5321,
+	4317,
+	2988,
+	1714,
+	5321,
+	1714,
+	4317,
+	5428,
+	5428,
+	4291,
+	5428,
+	5232,
+	5321,
+	5428,
+	5321,
+	4291,
+	5428,
+	5232,
+	5428,
+	5321,
+	5428,
+	5321,
+	4291,
+	5428,
+	5232,
+	5428,
+	5321,
+	5428,
+	5321,
+	5428,
+	5428,
+	5428,
+	5428,
+	5428,
+	5428,
+	5428,
+	5428,
+	5428,
+	4317,
+	4317,
+	5321,
+	4351,
+	5428,
+	4291,
+	5428,
+	5232,
+	5321,
+	5428,
+	5321,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	38,
+	128,
 	s_methodPointers,
 	0,
 	NULL,

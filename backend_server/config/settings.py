@@ -94,3 +94,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Firebase Config (Placeholder)
 FIREBASE_CREDENTIALS_PATH = os.environ.get('FIREBASE_CREDENTIALS_PATH', os.path.join(BASE_DIR, 'firebase_credentials.json'))
 FIREBASE_STORAGE_BUCKET = os.environ.get('FIREBASE_STORAGE_BUCKET', 'your-project-id.appspot.com') 
+
+# Session Settings
+SESSION_COOKIE_AGE = 1209600  # 2 weeks in seconds
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False

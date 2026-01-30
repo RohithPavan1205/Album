@@ -1,0 +1,28 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title %}{{ title }} | Live Album Admin{% endblock %}
+
+{% block extrastyle %}
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static 'admin/css/modern_admin.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">Live Album Administration</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+{% block content %}
+{% if request.path == '/admin/' %}
+<div class="apk-download-section">
+    <h3>📱 Android Application</h3>
+    <p>Download the latest version of the Admin Panel Unity Client (.apk) here.</p>
+    <a href="#" class="apk-download-btn">⬇ Download APK</a>
+</div>
+{% endif %}
+
+{{ block.super }}
+{% endblock %}

@@ -6,23 +6,270 @@
 {% block extrastyle %}
 {{ block.super }}
 <link rel="stylesheet" type="text/css" href="{% static 'admin/css/modern_admin.css' %}">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{% static 'admin/css/dashboard.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 {% endblock %}
 
 {% block branding %}
-<h1 id="site-name"><a href="{% url 'admin:index' %}">Live Album Administration</a></h1>
+<div class="custom-branding">
+    <div class="brand-logo">
+        <div class="logo-icon">📸</div>
+        <div class="logo-text">
+            <h1 id="site-name"><a href="{% url 'admin:index' %}">Live Album</a></h1>
+            <p class="brand-tagline">AR Content Management</p>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
-{% block nav-global %}{% endblock %}
+{% block nav-global %}
+<nav class="top-nav">
+    <div class="nav-links">
+        <a href="{% url 'admin:index' %}" class="nav-link {% if request.path == '/admin/' %}active{% endif %}">
+            <i class="fas fa-home"></i> Dashboard
+        </a>
+        <a href="{% url 'admin:client_assets_client_changelist' %}" class="nav-link">
+            <i class="fas fa-users"></i> Clients
+        </a>
+        <a href="{% url 'admin:client_assets_mediaasset_changelist' %}" class="nav-link">
+            <i class="fas fa-images"></i> Media Assets
+        </a>
+        <a href="{% url 'admin:client_assets_mediaasset_batch_upload' %}" class="nav-link">
+            <i class="fas fa-cloud-upload-alt"></i> Batch Upload
+        </a>
+    </div>
+    <div class="nav-user">
+        <span class="user-greeting">👋 Hi, {{ user.get_username }}</span>
+        <a href="{% url 'admin:logout' %}" class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i> Logout
+        </a>
+    </div>
+</nav>
+{% endblock %}
 
 {% block content %}
 {% if request.path == '/admin/' %}
-<div class="apk-download-section">
-    <h3>📱 Android Application</h3>
-    <p>Download the latest version of the Admin Panel Unity Client (.apk) here.</p>
-    <a href="#" class="apk-download-btn">⬇ Download APK</a>
-</div>
-{% endif %}
+<!-- Enhanced Dashboard -->
+<div class="dashboard-container">
+    <!-- Stats Cards -->
+    <div class="stats-grid">
+        <div class="stat-card stat-card-primary">
+            <div class="stat-icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <div class="stat-content">
+                <div class="stat-value">{{ total_clients|default:0 }}</div>
+                <div class="stat-label">Total Clients</div>
+            </div>
+            <div class="stat-trend">
+                <i class="fas fa-arrow-up"></i> Active
+            </div>
+        </div>
 
+        <div class="stat-card stat-card-success">
+            <div class="stat-icon">
+                <i class="fas fa-images"></i>
+            </div>
+            <div class="stat-content">
+                <div class="stat-value">{{ total_images|default:0 }}</div>
+                <div class="stat-label">Images Uploaded</div>
+            </div>
+            <div class="stat-trend">
+                <i class="fas fa-check-circle"></i> Ready
+            </div>
+        </div>
+
+        <div class="stat-card stat-card-info">
+            <div class="stat-icon">
+                <i class="fas fa-video"></i>
+            </div>
+            <div class="stat-content">
+                <div class="stat-value">{{ total_videos|default:0 }}</div>
+                <div class="stat-label">Videos Uploaded</div>
+            </div>
+            <div class="stat-trend">
+                <i class="fas fa-play-circle"></i> Active
+            </div>
+        </div>
+
+        <div class="stat-card stat-card-warning">
+            <div class="stat-icon">
+                <i class="fas fa-database"></i>
+            </div>
+            <div class="stat-content">
+                <div class="stat-value">{{ total_assets|default:0 }}</div>
+                <div class="stat-label">Total Assets</div>
+            </div>
+            <div class="stat-trend">
+                <i class="fas fa-chart-line"></i> Growing
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="quick-actions-section">
+        <h2 class="section-title">
+            <i class="fas fa-bolt"></i> Quick Actions
+        </h2>
+        <div class="quick-actions-grid">
+            <a href="{% url 'admin:client_assets_client_add' %}" class="action-card">
+                <div class="action-icon action-icon-primary">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <div class="action-content">
+                    <h3>Add New Client</h3>
+                    <p>Create a new client profile</p>
+                </div>
+            </a>
+
+            <a href="{% url 'admin:client_assets_mediaasset_batch_upload' %}" class="action-card">
+                <div class="action-icon action-icon-success">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                </div>
+                <div class="action-content">
+                    <h3>Batch Upload</h3>
+                    <p>Upload multiple assets at once</p>
+                </div>
+            </a>
+
+            <a href="{% url 'admin:client_assets_mediaasset_changelist' %}" class="action-card">
+                <div class="action-icon action-icon-info">
+                    <i class="fas fa-folder-open"></i>
+                </div>
+                <div class="action-content">
+                    <h3>View All Assets</h3>
+                    <p>Browse uploaded media files</p>
+                </div>
+            </a>
+
+            <a href="#" class="action-card" onclick="downloadAPK(); return false;">
+                <div class="action-icon action-icon-warning">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="action-content">
+                    <h3>Download APK</h3>
+                    <p>Get the AR mobile app</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Recent Activity & App Info -->
+    <div class="dashboard-grid">
+        <!-- Recent Uploads -->
+        <div class="dashboard-card">
+            <div class="card-header">
+                <h3><i class="fas fa-clock"></i> Recent Uploads</h3>
+                <a href="{% url 'admin:client_assets_mediaasset_changelist' %}" class="view-all-link">View All →</a>
+            </div>
+            <div class="card-content">
+                {% if recent_assets %}
+                <div class="recent-list">
+                    {% for asset in recent_assets %}
+                    <div class="recent-item">
+                        <div class="recent-icon">
+                            {% if asset.asset_type == 'IMAGE' %}
+                            <i class="fas fa-image"></i>
+                            {% else %}
+                            <i class="fas fa-video"></i>
+                            {% endif %}
+                        </div>
+                        <div class="recent-info">
+                            <div class="recent-title">{{ asset.client.client_name }}</div>
+                            <div class="recent-meta">{{ asset.asset_type }} • {{ asset.uploaded_at|timesince }} ago
+                            </div>
+                        </div>
+                        <div class="recent-badge">
+                            <span class="badge badge-{{ asset.asset_type|lower }}">{{ asset.asset_type }}</span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div class="empty-state">
+                    <i class="fas fa-inbox"></i>
+                    <p>No recent uploads</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- App Information -->
+        <div class="dashboard-card">
+            <div class="card-header">
+                <h3><i class="fas fa-mobile-alt"></i> AR Application</h3>
+            </div>
+            <div class="card-content">
+                <div class="app-info">
+                    <div class="app-icon">📱</div>
+                    <h4>Live Album AR Client</h4>
+                    <p>Download the Unity AR application to view your uploaded content in augmented reality.</p>
+
+                    <div class="app-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>AR Image Tracking</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Video Playback</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Offline Support</span>
+                        </div>
+                    </div>
+
+                    <button class="download-apk-btn" onclick="downloadAPK()">
+                        <i class="fas fa-download"></i> Download APK
+                    </button>
+
+                    <div class="app-stats">
+                        <div class="app-stat">
+                            <strong>Version:</strong> 2.0.0
+                        </div>
+                        <div class="app-stat">
+                            <strong>Size:</strong> ~50 MB
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- System Info -->
+    <div class="system-info-card">
+        <div class="system-info-content">
+            <div class="system-info-item">
+                <i class="fas fa-server"></i>
+                <span><strong>Backend:</strong> Django {{ django_version|default:"4.2" }}</span>
+            </div>
+            <div class="system-info-item">
+                <i class="fas fa-database"></i>
+                <span><strong>Database:</strong> SQLite</span>
+            </div>
+            <div class="system-info-item">
+                <i class="fas fa-cloud"></i>
+                <span><strong>Storage:</strong> Firebase</span>
+            </div>
+            <div class="system-info-item">
+                <i class="fas fa-cube"></i>
+                <span><strong>AR Engine:</strong> Unity + AR Foundation</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function downloadAPK() {
+        alert('APK download functionality will be implemented here.\nPlease configure the APK URL in your settings.');
+        // In production, redirect to actual APK URL:
+        // window.location.href = '/path/to/your/app.apk';
+    }
+</script>
+
+{% else %}
 {{ block.super }}
+{% endif %}
 {% endblock %}
